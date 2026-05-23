@@ -23,8 +23,7 @@ namespace type_traits
   template <bool Condition> using enable_if = std::enable_if_t<Condition>;
 
   template <typename Invoker, typename... Args>
-  using enable_if_arg_pack_invocable =
-      enable_if<std::is_invocable_v<Invoker, Args...>>;
+  using enable_if_invocable = enable_if<std::is_invocable_v<Invoker, Args...>>;
 
   template <typename Invoker, typename... Args>
   using enable_if_separate_args_invocable =
