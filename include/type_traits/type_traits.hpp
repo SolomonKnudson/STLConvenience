@@ -19,6 +19,7 @@ namespace type_traits
   {
   };
 
+  // Custom traits
   template <typename T>
   struct can_deref<T, std::void_t<decltype(*std::declval<T>())>>
     : std::true_type

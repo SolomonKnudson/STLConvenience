@@ -17,4 +17,6 @@ target_compile_features(TypeTraitsWrapper INTERFACE
 set_target_properties(TypeTraitsWrapper PROPERTIES
   CXX_VISIBILITY_PRESET hidden
   VISIBILITY_INLINES_HIDDEN ON
+  CXX_STANDARD_REQUIRED ON
+  CXX_EXTENSIONS OFF
 )
