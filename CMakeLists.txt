@@ -7,7 +7,7 @@ project(TypeTraitsWrapper LANGUAGES CXX)
 add_library(TypeTraitsWrapper INTERFACE)
 
 target_include_directories(TypeTraitsWrapper INTERFACE 
-  ${CMAKE_CURRENT_LIST_DIR}/include/
+  "${CMAKE_CURRENT_LIST_DIR}/include/"
 )
 
 target_compile_features(TypeTraitsWrapper INTERFACE
