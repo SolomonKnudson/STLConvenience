@@ -4,7 +4,7 @@
 
 namespace type_traits
 {
-
+  // Struct Type Traits
   template <typename, typename = void> struct can_deref : std::false_type
   {
   };
@@ -13,14 +13,19 @@ namespace type_traits
     : std::true_type
   {
   };
+  // END Struct Type Traits
 
+  // Variable Type Traits
   template <typename T> constexpr bool can_deref_v{can_deref<T>::value};
 
   template <typename Function, typename... Args>
   constexpr bool separate_args_invocable_v{
       (std::is_invocable_v<Function, Args> && ...)};
+  // END Variable Type Traits
 
-  template <bool Condition> using enable_if = std::enable_if_t<Condition>;
+  // Using Type Traits
+  template <bool Condition, typename type = void>
+  using enable_if = std::enable_if_t<Condition, type>;
 
   template <typename Invoker, typename... Args>
   using enable_if_invocable = enable_if<std::is_invocable_v<Invoker, Args...>>;
@@ -35,6 +40,7 @@ namespace type_traits
   using remove_cv_reference = std::remove_cv_t<remove_reference<T>>;
 
   template <typename T> using remove_pointer = std::remove_pointer_t<T>;
+  // END Using Type Traits
 } // namespace type_traits
 #endif // TYPE_TRAITS_WRAPPER_HPP
 
