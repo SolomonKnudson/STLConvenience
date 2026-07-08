@@ -2,7 +2,7 @@
 #define CHRONO_COUNT_HPP
 #include <chrono>
 
-namespace chrono
+namespace STLC::chrono
 {
   template <typename Duration>
   Duration
@@ -46,5 +46,5 @@ namespace chrono
   {
     return to_duration<std::chrono::nanoseconds>(count);
   }
-} // namespace chrono
+} // namespace STLC::chrono
 #endif // CHRONO_WRAPPER_HPP

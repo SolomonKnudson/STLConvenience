@@ -2,7 +2,7 @@
 #define TYPE_TRAITS_WRAPPER_HPP
 #include <type_traits>
 
-namespace type_traits
+namespace STLC::type_traits
 {
   // Struct Type Traits
   template <typename, typename = void> struct can_deref : std::false_type
@@ -42,5 +42,5 @@ namespace type_traits
 
   template <typename T> using remove_pointer = std::remove_pointer_t<T>;
   // END Using Type Traits
-} // namespace type_traits
+} // namespace STLC::type_traits
 #endif // TYPE_TRAITS_WRAPPER_HPP

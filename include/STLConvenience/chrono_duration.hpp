@@ -2,7 +2,7 @@
 #define CHRONO_DURATION_HPP
 #include <chrono>
 
-namespace chrono
+namespace STLC::chrono
 {
   template <typename ReturnDuration, typename Rep, typename Period>
   static ReturnDuration
@@ -52,5 +52,5 @@ namespace chrono
   {
     return to_duration<std::chrono::nanoseconds>(duration);
   }
-} // namespace chrono
+} // namespace STLC::chrono
 #endif // CHRONO_WRAPPER_HPP
