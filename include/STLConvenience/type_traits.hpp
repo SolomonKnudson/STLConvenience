@@ -8,6 +8,7 @@ namespace type_traits
   template <typename, typename = void> struct can_deref : std::false_type
   {
   };
+
   template <typename T>
   struct can_deref<T, std::void_t<decltype(*std::declval<T>())>>
     : std::true_type
@@ -43,4 +44,3 @@ namespace type_traits
   // END Using Type Traits
 } // namespace type_traits
 #endif // TYPE_TRAITS_WRAPPER_HPP
-
