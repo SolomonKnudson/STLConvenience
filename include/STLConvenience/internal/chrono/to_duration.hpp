@@ -1,5 +1,5 @@
-#ifndef CHRONO_DURATION_HPP
-#define CHRONO_DURATION_HPP
+#ifndef STLC_INTERNAL_CHRONO_TO_DURATION_HPP
+#define STLC_INTERNAL_CHRONO_TO_DURATION_HPP
 #include <chrono>
 
 namespace STLC::chrono
@@ -53,4 +53,4 @@ namespace STLC::chrono
     return to_duration<std::chrono::nanoseconds>(duration);
   }
 } // namespace STLC::chrono
-#endif // CHRONO_WRAPPER_HPP
+#endif // STLC_INTERNAL_CHRONO_TO_DURATION_HPP

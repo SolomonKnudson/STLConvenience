@@ -1,5 +1,5 @@
-#ifndef TYPE_TRAITS_WRAPPER_HPP
-#define TYPE_TRAITS_WRAPPER_HPP
+#ifndef STLC_TYPE_TRAITS_HPP
+#define STLC_TYPE_TRAITS_HPP
 #include <type_traits>
 
 namespace STLC::type_traits
@@ -43,4 +43,4 @@ namespace STLC::type_traits
   template <typename T> using remove_pointer = std::remove_pointer_t<T>;
   // END Using Type Traits
 } // namespace STLC::type_traits
-#endif // TYPE_TRAITS_WRAPPER_HPP
+#endif // STLC_TYPE_TRAITS_HPP
