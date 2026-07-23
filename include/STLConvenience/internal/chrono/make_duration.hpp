@@ -7,7 +7,7 @@ namespace STLC::chrono
 {
   template <typename ReturnDuration,
             typename Rep,
-            typename = STLC::type_traits::enable_if<std::is_aritmetic_v<Rep>>>
+            typename = STLC::type_traits::enable_if<std::is_arithmetic_v<Rep>>>
   constexpr ReturnDuration
   make_duration(const Rep count)
   {
