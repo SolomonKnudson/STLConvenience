@@ -14,38 +14,44 @@ namespace STLC::chrono
     return ReturnDuration{count};
   }
 
+  template <typename Rep>
   static constexpr std::chrono::hours
-  make_hours(const std::chrono::hours::rep count)
+  make_hours(const Rep count)
   {
     return make_duration<std::chrono::hours>(count);
   }
 
+  template <typename Rep>
   static constexpr std::chrono::minutes
-  make_minutes(const std::chrono::minutes::rep count)
+  make_minutes(const Rep count)
   {
     return make_duration<std::chrono::minutes>(count);
   }
 
+  template <typename Rep>
   static constexpr std::chrono::seconds
-  make_seconds(const std::chrono::seconds::rep count)
+  make_seconds(const Rep count)
   {
     return make_duration<std::chrono::seconds>(count);
   }
 
+  template <typename Rep>
   static constexpr std::chrono::milliseconds
-  make_milliseconds(const std::chrono::milliseconds::rep count)
+  make_milliseconds(const Rep count)
   {
     return make_duration<std::chrono::milliseconds>(count);
   }
 
+  template <typename Rep>
   static constexpr std::chrono::microseconds
-  make_microseconds(const std::chrono::microseconds::rep count)
+  make_microseconds(const Rep count)
   {
     return make_duration<std::chrono::microseconds>(count);
   }
 
+  template <typename Rep>
   static constexpr std::chrono::nanoseconds
-  make_nanoseconds(const std::chrono::nanoseconds::rep count)
+  make_nanoseconds(const Rep count)
   {
     return make_duration<std::chrono::nanoseconds>(count);
   }
