@@ -1,6 +1,6 @@
 #ifndef STLC_INTERNAL_CHRONO_TO_DURATION_HPP
 #define STLC_INTERNAL_CHRONO_TO_DURATION_HPP
-#include <chrono>
+#include <STLConvenience/internal/chrono/base.hpp>
 
 namespace STLC::chrono
 {
@@ -12,45 +12,45 @@ namespace STLC::chrono
   }
 
   template <typename Duration>
-  constexpr std::chrono::hours
+  constexpr decltype(auto)
   to_hours(const Duration& duration)
   {
-    return to_duration<std::chrono::hours>(duration);
+    return to_duration<hours_t<typename Duration::rep>>(duration);
   }
 
   template <typename Duration>
-  constexpr std::chrono::minutes
+  constexpr decltype(auto)
   to_minutes(const Duration& duration)
   {
-    return to_duration<std::chrono::minutes>(duration);
+    return to_duration<minutes_t<typename Duration::rep>>(duration);
   }
 
   template <typename Duration>
-  constexpr std::chrono::seconds
+  constexpr decltype(auto)
   to_seconds(const Duration& duration)
   {
-    return to_duration<std::chrono::seconds>(duration);
+    return to_duration<seconds_t<typename Duration::rep>>(duration);
   }
 
   template <typename Duration>
-  constexpr std::chrono::milliseconds
+  constexpr decltype(auto)
   to_milliseconds(const Duration& duration)
   {
-    return to_duration<std::chrono::milliseconds>(duration);
+    return to_duration<milliseconds_t<typename Duration::rep>>(duration);
   }
 
   template <typename Duration>
-  constexpr std::chrono::microseconds
+  constexpr decltype(auto)
   to_microseconds(const Duration& duration)
   {
-    return to_duration<std::chrono::microseconds>(duration);
+    return to_duration<microseconds_t<typename Duration::rep>>(duration);
   }
 
   template <typename Duration>
-  constexpr std::chrono::nanoseconds
+  constexpr decltype(auto)
   to_nanoseconds(const Duration& duration)
   {
-    return to_duration<std::chrono::nanoseconds>(duration);
+    return to_duration<nanoseconds_t<typename Duration::rep>>(duration);
   }
 } // namespace STLC::chrono
 #endif // STLC_INTERNAL_CHRONO_TO_DURATION_HPP
