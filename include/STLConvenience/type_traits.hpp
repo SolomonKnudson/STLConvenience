@@ -1,5 +1,6 @@
 #ifndef STLC_TYPE_TRAITS_HPP
 #define STLC_TYPE_TRAITS_HPP
+#include <chrono>
 #include <type_traits>
 
 namespace STLC::type_traits
@@ -14,10 +15,23 @@ namespace STLC::type_traits
     : std::true_type
   {
   };
+
+  template <typename> struct is_chrono_duration : std::false_type
+  {
+  };
+
+  template <typename Rep, typename Period>
+  struct is_chrono_duration<std::chrono::duration<Rep, Period>> : std::true_type
+  {
+  };
+
   // END Struct Type Traits
 
   // Variable Type Traits
   template <typename T> constexpr bool can_deref_v{can_deref<T>::value};
+
+  template <typename Duration>
+  constexpr bool is_chrono_duration_v{is_chrono_duration<Duration>::value};
 
   template <typename Function, typename... Args>
   constexpr bool separate_args_invocable_v{
