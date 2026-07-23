@@ -1,14 +1,17 @@
 #ifndef STLC_INTERNAL_CHRONO_MAKE_DURATION_HPP
 #define STLC_INTERNAL_CHRONO_MAKE_DURATION_HPP
+#include <STLConvenience/type_traits.hpp>
 #include <chrono>
 
 namespace STLC::chrono
 {
-  template <typename Duration>
-  constexpr Duration
-  make_duration(const typename Duration::rep count)
+  template <typename ReturnDuration,
+            typename Rep,
+            typename = STLC::type_traits::enable_if<std::is_aritmetic_v<Rep>>>
+  constexpr ReturnDuration
+  make_duration(const Rep count)
   {
-    return Duration{count};
+    return ReturnDuration{count};
   }
 
   static constexpr std::chrono::hours
