@@ -1,6 +1,6 @@
-#ifndef STLC_INTERNAL_CHRONO_MAKE_DURATION_HPP
-#define STLC_INTERNAL_CHRONO_MAKE_DURATION_HPP
-#include <STLConvenience/internal/chrono/base.hpp>
+#ifndef STLC_CHRONO_MAKE_DURATION_HPP
+#define STLC_CHRONO_MAKE_DURATION_HPP
+#include <STLConvenience/chrono/base.hpp>
 
 namespace STLC::chrono
 {
@@ -53,4 +53,4 @@ namespace STLC::chrono
     return make_duration<nanoseconds_t<Rep>>(count);
   }
 } // namespace STLC::chrono
-#endif // STLC_INTERNAL_CHRONO_MAKE_DURATION_HPP
+#endif // STLC_CHRONO_MAKE_DURATION_HPP

@@ -1,6 +1,6 @@
-#ifndef STLC_INTERNAL_CHRONO_TO_DURATION_HPP
-#define STLC_INTERNAL_CHRONO_TO_DURATION_HPP
-#include <STLConvenience/internal/chrono/base.hpp>
+#ifndef STLC_CHRONO_TO_DURATION_HPP
+#define STLC_CHRONO_TO_DURATION_HPP
+#include <STLConvenience/chrono/base.hpp>
 
 namespace STLC::chrono
 {
@@ -53,4 +53,4 @@ namespace STLC::chrono
     return to_duration<nanoseconds_t<typename Duration::rep>>(duration);
   }
 } // namespace STLC::chrono
-#endif // STLC_INTERNAL_CHRONO_TO_DURATION_HPP
+#endif // STLC_CHRONO_TO_DURATION_HPP

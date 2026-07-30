@@ -1,5 +1,5 @@
-#ifndef STLC_INTERNAL_CHRONO_BASE_HPP
-#define STLC_INTERNAL_CHRONO_BASE_HPP
+#ifndef STLC_CHRONO_BASE_HPP
+#define STLC_CHRONO_BASE_HPP
 #include <chrono>
 
 namespace STLC::chrono
